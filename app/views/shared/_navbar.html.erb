@@ -1,7 +1,5 @@
 <% if user_signed_in? %>
-    <nav class="navbar navbar-dark bg-dark justify-content-center">
-        <a class="navbar-brand" href="#">Don Botadsadsas Meat</a>
-    </nav>
+    <%= render 'shared/dashboard' %>
 <% else %>
     <nav class="navbar navbar-dark bg-dark justify-content-center">
         <a class="navbar-brand" href="#">Don Botas Meat</a>
