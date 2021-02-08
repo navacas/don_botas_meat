@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :clients
   resources :products
   resources :pedidos
-  root to: "clients#index"
+  resources :order_histories
+  root to: "homes#index"
 end

@@ -30,7 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
 
-gem 'bootstrap', '~> 5.0.0.alpha3'
+gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
 gem 'mini_racer'
 

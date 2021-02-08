@@ -10,12 +10,20 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <div class="container">
-      <%= yield %>
-    </div>
+    <% if user_signed_in? %>
+      <%= render 'shared/navbar' %>
+      
+    <% else %>
+    <!-- Image and text -->
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          DonBotasMeat
+        </a>
+      </nav>
+      <div class="container mt-5">
+        <%= yield %>
+      </div>
+    <% end %>
     
   </body>
 </html>

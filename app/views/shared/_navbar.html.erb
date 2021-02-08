@@ -1,7 +1,41 @@
-<% if user_signed_in? %>
-    <%= render 'shared/dashboard' %>
-<% else %>
-    <nav class="navbar navbar-dark bg-dark justify-content-center">
-        <a class="navbar-brand" href="#">Don Botas Meat</a>
-    </nav>
-<% end %>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="navbarText">
+    <ul class="navbar-nav">
+      <a class="navbar-brand" href="#">Don Botas</a>
+    </ul>
+  </div>
+  <span class="navbar-text">
+      <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
+  </span>
+   
+</nav>
+
+<ul class="nav nav-pills justify-content-center mb-2">
+  <li class="nav-item"> 
+    <%= link_to "Inicio", root_path, class:"nav-link active" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Productos", products_path, class:"nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Pedidos", pedidos_path, class:"nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Clientes", clients_path, class:"nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Ordenes", order_histories_path, class:"nav-link" %>
+  </li>
+</ul>
+
+<div class="container">
+    <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="card-body">
+            <%= yield %>
+            
+        </div>
+    </div>
+</div>
